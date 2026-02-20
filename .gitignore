@@ -1,0 +1,49 @@
+# Environment variables
+.env
+phase_4/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+
+# Databases
+data/chroma_db/
+data/chroma_db_v1/
+*.sqlite3
+
+# Debug/Temporary files
+rendered_page.html
+ba_page_text.txt
+debug_page.html
+diagnose_results.txt
+json_ld.json
+next_data.json
+*.log
+analyze_rendered.py
+debug_store_contents.py
+diagnose_html.py
+extract_next_data.py
+find_arindam_card.py
+find_devansh.py
+find_instructor_links.py
+inspect_ba_course.py
+inspect_ba_duration.py
+inspect_homepage.py
+inspect_instructors.py
+inspect_slide_0.py
+list_headers.py
+list_models.py
+locate_devansh.py
+map_links.py
+robust_diagnose.py
+test_playwright.py
+trace_instructor.py
+verify_retrieval.py
+verify_ui.py
+
+# Sensitive data
+data/raw/
