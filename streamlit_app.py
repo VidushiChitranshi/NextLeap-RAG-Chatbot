@@ -16,12 +16,17 @@ from main import build_chatbot
 
 # ── Load Environment ──────────────────────────────────────────────────────
 # Prioritise Streamlit Secrets if available (for Cloud), else use .env
-if "GOOGLE_API_KEY" in st.secrets:
-    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
-if "GROQ_API_KEY" in st.secrets:
-    os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
-else:
-    load_dotenv()
+load_dotenv()
+
+try:
+    if "GOOGLE_API_KEY" in st.secrets:
+        os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+    if "GROQ_API_KEY" in st.secrets:
+        os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+except (FileNotFoundError, KeyError, Exception):
+    # This handles StreamlitSecretNotFoundError or missing keys silently
+    # as we already have fallbacks from load_dotenv()
+    pass
 
 # ── Page Configuration ─────────────────────────────────────────────────────
 st.set_page_config(
