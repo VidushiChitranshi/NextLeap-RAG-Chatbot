@@ -1,7 +1,27 @@
 import streamlit as st
 import os
+import sys
+
+# ── Streamlit Cloud SQLite Fix ─────────────────────────────────────────────
+# Streamlit Cloud's default SQLite version is often too old for ChromaDB.
+# This wrapper swaps it for a modern version if pysqlite3-binary is installed.
+try:
+    __import__('pysqlite3')
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+
 from dotenv import load_dotenv
 from main import build_chatbot
+
+# ── Load Environment ──────────────────────────────────────────────────────
+# Prioritise Streamlit Secrets if available (for Cloud), else use .env
+if "GOOGLE_API_KEY" in st.secrets:
+    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+if "GROQ_API_KEY" in st.secrets:
+    os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+else:
+    load_dotenv()
 
 # ── Page Configuration ─────────────────────────────────────────────────────
 st.set_page_config(
@@ -47,7 +67,7 @@ chatbot = get_chatbot()
 
 # ── Session State ──────────────────────────────────────────────────────────
 if "messages" not in st.session_state:
-    st.session_state.messages = []
+    st.session_state.messages = [{"role": "assistant", "content": "Hi! How may I help you?\n\nYou can ask questions related to :\n1. Different Courses offered by NextLeap\n2. Important dates related to various courses\n3. Instructors of NextLeap\n4. Mentors for different courses"}]
 
 # ── Sidebar ───────────────────────────────────────────────────────────────
 with st.sidebar:
@@ -77,7 +97,12 @@ for message in st.session_state.messages:
         if "citations" in message and message["citations"]:
             st.markdown("---")
             st.markdown("**Sources:**")
-            citations_html = "".join([f'<span class="citation-label">{c}</span>' for c in message["citations"]])
+            citations_html = ""
+            for c in message["citations"]:
+                if c.startswith("http"):
+                    citations_html += f'<a href="{c}" target="_blank" class="citation-label" style="text-decoration: none;">🔗 Source</a>'
+                else:
+                    citations_html += f'<span class="citation-label">{c}</span>'
             st.markdown(citations_html, unsafe_allow_html=True)
 
 # Accept user input
@@ -114,7 +139,12 @@ if prompt := st.chat_input("Ask me about the PM fellowship..."):
         if citations:
             st.markdown("---")
             st.markdown("**Sources:**")
-            citations_html = "".join([f'<span class="citation-label">{c}</span>' for c in citations])
+            citations_html = ""
+            for c in citations:
+                if c.startswith("http"):
+                    citations_html += f'<a href="{c}" target="_blank" class="citation-label" style="text-decoration: none;">🔗 Source</a>'
+                else:
+                    citations_html += f'<span class="citation-label">{c}</span>'
             st.markdown(citations_html, unsafe_allow_html=True)
             
         # Add assistant response to chat history

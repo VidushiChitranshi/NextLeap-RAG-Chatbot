@@ -143,21 +143,29 @@ class ResponseFormatter:
         """
         Build a de-duplicated, human-readable citations list from chunk metadata.
 
-        Looks for 'section_type' and/or 'source' keys in each metadata dict.
+        - Skips generic labels like 'Pricing', 'Overview', 'Faculty'.
+        - Always prioritizes and includes the 'source' URL if available.
         """
         seen: set = set()
         citations: List[str] = []
+        
+        # Tags to exclude from the UI
+        excluded_tags = {"Pricing", "Overview", "Faculty"}
 
         for meta in metadata_list:
             section = meta.get("section_type", "")
             source = meta.get("source", "")
 
+            # 1. Try to get a section label
             label = section.replace("_", " ").title() if section else ""
-            if not label and source:
-                # Use a shortened URL as fallback label
-                label = source.rstrip("/").split("/")[-1] or source
+            
+            # 2. Add source URL if available (this is now requested by the user)
+            if source and source not in seen:
+                seen.add(source)
+                citations.append(source)
 
-            if label and label not in seen:
+            # 3. Add section label only if it's not in the excluded list and not already seen
+            if label and label not in excluded_tags and label not in seen:
                 seen.add(label)
                 citations.append(label)
 

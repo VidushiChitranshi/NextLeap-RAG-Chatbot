@@ -26,10 +26,19 @@ function addMessage(text, sender, citations = [], isFallback = false) {
         const citationsDiv = document.createElement('div');
         citationsDiv.classList.add('citations');
         citations.forEach(cit => {
-            const span = document.createElement('span');
-            span.classList.add('citation-tag');
-            span.textContent = cit;
-            citationsDiv.appendChild(span);
+            let el;
+            if (cit.startsWith('http')) {
+                el = document.createElement('a');
+                el.href = cit;
+                el.target = '_blank';
+                el.textContent = '🔗 Source';
+                el.style.textDecoration = 'none';
+            } else {
+                el = document.createElement('span');
+                el.textContent = cit;
+            }
+            el.classList.add('citation-tag');
+            citationsDiv.appendChild(el);
         });
         messageDiv.appendChild(citationsDiv);
     }
@@ -79,7 +88,7 @@ async function sendMessage() {
         });
 
         const data = await response.json();
-        
+
         loadingMsg.remove();
 
         if (data.success) {
@@ -100,11 +109,11 @@ async function sendMessage() {
 
 async function clearHistory() {
     if (!confirm('Are you sure you want to clear the conversation history?')) return;
-    
+
     try {
         await fetch('/clear', { method: 'POST' });
         chatWindow.innerHTML = '';
-        addMessage('History cleared. How can I help you today?', 'bot');
+        addMessage('Hi! How may I help you?\n\nYou can ask questions related to :\n1. Different Courses offered by NextLeap\n2. Important dates related to various courses\n3. Instructors of NextLeap\n4. Mentors for different courses', 'bot');
     } catch (err) {
         alert('Failed to clear history');
     }
@@ -122,4 +131,4 @@ clearBtn.addEventListener('click', clearHistory);
 
 // Initial focus
 chatInput.focus();
-addMessage('Hi! I am the NextLeap RAG Chatbot. Ask me anything about the PM fellowship or other courses.', 'bot');
+addMessage('Hi! How may I help you?\n\nYou can ask questions related to :\n1. Different Courses offered by NextLeap\n2. Important dates related to various courses\n3. Instructors of NextLeap\n4. Mentors for different courses', 'bot');

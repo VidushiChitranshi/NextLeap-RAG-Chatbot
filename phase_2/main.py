@@ -23,7 +23,7 @@ def main():
         return
 
     parser = argparse.ArgumentParser(description="Embed Course Data")
-    parser.add_argument("--data-file", default="data/raw/course_data_v2.json", help="Path to the scraped JSON data file")
+    parser.add_argument("--data-file", default="data/raw/all_courses.json", help="Path to the scraped JSON data file")
     parser.add_argument("--reset-db", action="store_true", help="Clear existing vector store before adding new data")
     args = parser.parse_args()
 

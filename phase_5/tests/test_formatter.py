@@ -105,9 +105,9 @@ class TestResponseFormatterCitations:
         self.formatter = ResponseFormatter(include_citations=True)
 
     def test_section_type_used_as_citation(self):
-        meta = [{"section_type": "pricing"}]
-        result = self.formatter.format("The fee is INR 36,999.", meta)
-        assert "Pricing" in result.citations
+        meta = [{"section_type": "curriculum_week_1"}]
+        result = self.formatter.format("Week 1 covers...", meta)
+        assert "Curriculum Week 1" in result.citations
 
     def test_underscores_replaced_in_citation(self):
         meta = [{"section_type": "curriculum_week_1"}]
@@ -116,23 +116,23 @@ class TestResponseFormatterCitations:
 
     def test_duplicate_citations_deduplicated(self):
         meta = [
-            {"section_type": "pricing"},
-            {"section_type": "pricing"},
-            {"section_type": "pricing"},
+            {"section_type": "curriculum"},
+            {"section_type": "curriculum"},
+            {"section_type": "curriculum"},
         ]
         result = self.formatter.format("answer", meta)
-        assert result.citations.count("Pricing") == 1
+        assert result.citations.count("Curriculum") == 1
 
     def test_multiple_sections_all_cited(self):
         meta = [
-            {"section_type": "overview"},
-            {"section_type": "pricing"},
-            {"section_type": "faculty"},
+            {"section_type": "curriculum"},
+            {"section_type": "syllabus"},
+            {"section_type": "faq"},
         ]
         result = self.formatter.format("answer", meta)
-        assert "Overview" in result.citations
-        assert "Pricing" in result.citations
-        assert "Faculty" in result.citations
+        assert "Curriculum" in result.citations
+        assert "Syllabus" in result.citations
+        assert "Faq" in result.citations
 
     def test_no_citations_appended_for_fallback(self):
         """Citations should NOT appear in fallback answers."""
@@ -143,24 +143,40 @@ class TestResponseFormatterCitations:
         assert "📚" not in result.answer
 
     def test_citations_appended_to_answer(self):
-        meta = [{"section_type": "pricing"}]
-        result = self.formatter.format("The fee is INR 36,999.", meta)
-        assert "Pricing" in result.answer  # citation inline in answer
+        meta = [{"section_type": "curriculum"}]
+        result = self.formatter.format("The syllabus includes...", meta)
+        assert "Curriculum" in result.answer  # citation inline in answer
 
     def test_no_metadata_means_no_citations(self):
         result = self.formatter.format("answer", [])
         assert result.citations == []
 
-    def test_citations_disabled_when_flag_off(self):
-        """include_citations=False suppresses the emoji line in the answer;
-        the citations list is still extracted for downstream use."""
-        formatter = ResponseFormatter(include_citations=False)
-        meta = [{"section_type": "pricing"}]
-        result = formatter.format("answer", meta)
-        # Emoji citation line must NOT appear in the answer string
-        assert "📚" not in result.answer
-        # But citations are still extracted so callers can use them
-        assert "Pricing" in result.citations
+    def test_restricted_tags_filtered_and_source_included(self):
+        """Pricing, Overview, Faculty should be filtered, but source URL should stay."""
+        meta = [
+            {"section_type": "pricing", "source": "https://nextleap.app/course/pm"},
+            {"section_type": "overview", "source": "https://nextleap.app/course/pm"},
+        ]
+        result = self.formatter.format("answer", meta)
+        # 'Pricing' and 'Overview' should NOT be in citations
+        assert "Pricing" not in result.citations
+        assert "Overview" not in result.citations
+        # The source URL SHOULD be in citations
+        assert "https://nextleap.app/course/pm" in result.citations
+
+    def test_multiple_sources_included(self):
+        meta = [
+            {"source": "https://link1.com"},
+            {"source": "https://link2.com"},
+        ]
+        result = self.formatter.format("answer", meta)
+        assert "https://link1.com" in result.citations
+        assert "https://link2.com" in result.citations
+
+    def test_citations_appended_to_answer_as_links(self):
+        meta = [{"source": "https://nextleap.app/course/pm"}]
+        result = self.formatter.format("The fee is INR 36,999.", meta)
+        assert "https://nextleap.app/course/pm" in result.answer
 
 
 class TestResponseFormatterEdgeCases:

@@ -72,6 +72,11 @@ def main():
     _banner()
     chatbot = build_chatbot()
     print("\n[BOT] Hi! How may I help you?\n")
+    print("You can ask questions related to :")
+    print("1. Different Courses offered by NextLeap")
+    print("2. Important dates related to various courses")
+    print("3. Instructors of NextLeap")
+    print("4. Mentors for different courses\n")
 
     while True:
         try:

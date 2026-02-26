@@ -13,7 +13,7 @@ class VectorStore:
     Manages the ChromaDB vector store.
     """
 
-    def __init__(self, persist_directory: str = "data/chroma_db_v1"):
+    def __init__(self, persist_directory: str = "data/chroma_db_v2"):
         self.persist_directory = persist_directory
         self.embedding_function = self._get_embedding_function()
         self.vector_store = self._init_vector_store()
@@ -63,8 +63,22 @@ class VectorStore:
 
     def clear(self):
         """Clears the existing vector store."""
+        # Try to delete the directory
         if os.path.exists(self.persist_directory):
-            shutil.rmtree(self.persist_directory)
-            logger.info(f"Cleared existing vector store at {self.persist_directory}")
-            # Re-initialize
-            self.vector_store = self._init_vector_store()
+            logger.info(f"Attempting to clear existing vector store at {self.persist_directory}")
+            try:
+                shutil.rmtree(self.persist_directory)
+                logger.info(f"Successfully removed {self.persist_directory}")
+            except PermissionError:
+                logger.warning(f"Could not remove {self.persist_directory} due to PermissionError. This is common on Windows if the DB is in use.")
+                logger.info("Attempting to delete collection instead...")
+                try:
+                    self.vector_store.delete_collection()
+                    logger.info("Collection deleted.")
+                except Exception as e:
+                    logger.error(f"Failed to delete collection: {e}")
+            except Exception as e:
+                logger.error(f"Error clearing vector store: {e}")
+
+        # Re-initialize
+        self.vector_store = self._init_vector_store()

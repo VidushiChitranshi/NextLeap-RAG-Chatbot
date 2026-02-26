@@ -1,0 +1,577 @@
+{
+  "metadata": {
+    "scraped_at": "2026-02-19T21:09:49.072124",
+    "total_courses_found": 4,
+    "total_courses_scraped": 4
+  },
+  "courses": [
+    {
+      "course": {
+        "title": "Business Analyst Fellowship",
+        "url": "https://nextleap.app/course/business-analyst-course",
+        "duration_weeks": 18,
+        "fellowship_months": 4,
+        "live_class_hours": 150,
+        "placement_support_years": 1,
+        "certification_awarded": "Yes"
+      },
+      "cohort": {
+        "id": null,
+        "start_date": "2026-03-07",
+        "status": "OPEN"
+      },
+      "pricing": {
+        "amount": 36999,
+        "currency": "INR",
+        "display": "INR 36,999"
+      },
+      "faculty": {
+        "mentors": [
+          {
+            "name": "Praneeta Gupta",
+            "designation": "Senior Data and Business Analyst @ Zomato, Ex- Uber",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/praneetagupta/"
+          },
+          {
+            "name": "Ankush Kumar",
+            "designation": "Strategy and Analytics Manager",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/ankush1712/"
+          },
+          {
+            "name": "Shashank Mittal",
+            "designation": "Senior Manager - Zomato",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/shashankmittal1991/"
+          },
+          {
+            "name": "Akshat Jain",
+            "designation": "Sr. Credit Risk Analyst",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/akshat-j-9aaa2a105/"
+          },
+          {
+            "name": "Vivek Vardhan",
+            "designation": "Sr. Data Analyst",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/vivek-vardhan-5187418a/"
+          },
+          {
+            "name": "Akash Garg",
+            "designation": "Senior Analytics Manager",
+            "company": "Flipkart",
+            "profile_url": "https://www.linkedin.com/in/akash-garg-india/"
+          },
+          {
+            "name": "Vishnubhotla Naga Bharadwaj",
+            "designation": "Analytics Manager II @Zepto",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/vishnubhotla/"
+          }
+        ],
+        "instructors": [
+          {
+            "name": "Arindam Mukherjee",
+            "designation": "Co-founder Previously @ Flipkart, TripAdvisor",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/arindammukho/"
+          },
+          {
+            "name": "Sahil Agarwal",
+            "designation": "Lead Business Analyst",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/sahil-agarwal-46956813b/"
+          },
+          {
+            "name": "Saksham  Arora",
+            "designation": "Software Engineer 2 @ Intuit",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/sakshamarora9575/"
+          },
+          {
+            "name": "Rishav Kumar",
+            "designation": "Principal - Analytics",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/rishavkumar1/"
+          },
+          {
+            "name": "Varun Talikoti",
+            "designation": "Ex - Senior Manager, Business Analytics Previously @ Flipkart",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/varuntalikoti/"
+          },
+          {
+            "name": "Navdeep Singh",
+            "designation": "Senior Software Engineer",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/navdeep-singh-494498152/"
+          },
+          {
+            "name": "Himanshu Agarwal",
+            "designation": "Product Lead @Acko",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/himanshuagarwal831/"
+          }
+        ]
+      },
+      "metadata": {
+        "scraped_at": "2026-02-19T21:08:17.021723",
+        "source_url": "https://nextleap.app/course/business-analyst-course"
+      }
+    },
+    {
+      "course": {
+        "title": "Data Analyst Fellowship",
+        "url": "https://nextleap.app/course/data-analyst-course",
+        "duration_weeks": 16,
+        "fellowship_months": 4,
+        "live_class_hours": null,
+        "placement_support_years": 1,
+        "certification_awarded": "Yes"
+      },
+      "cohort": {
+        "id": 18,
+        "start_date": "2026-03-07",
+        "status": "OPEN"
+      },
+      "pricing": {
+        "amount": 36999,
+        "currency": "INR",
+        "display": "INR 36,999"
+      },
+      "faculty": {
+        "mentors": [
+          {
+            "name": "Praneeta Gupta",
+            "designation": "Senior Data and Business Analyst @ Zomato, Ex- Uber",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/praneetagupta/"
+          },
+          {
+            "name": "Ankush Kumar",
+            "designation": "Strategy and Analytics Manager",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/ankush1712/"
+          },
+          {
+            "name": "Vivek Vardhan",
+            "designation": "Sr. Data Analyst",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/vivek-vardhan-5187418a/"
+          },
+          {
+            "name": "Akshat Jain",
+            "designation": "Sr. Credit Risk Analyst",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/akshat-j-9aaa2a105/"
+          },
+          {
+            "name": "Vishnubhotla Naga Bharadwaj",
+            "designation": "Analytics Manager II @Zepto",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/vishnubhotla/"
+          },
+          {
+            "name": "Vivek Kumar",
+            "designation": "Senior Data Scientist @PayTM",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/vivek-kumar-10a07210a/"
+          },
+          {
+            "name": "Akash Dongre",
+            "designation": "Data Analyst @ Uber",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/akash-dongre/"
+          },
+          {
+            "name": "Mohak Jain",
+            "designation": "Lead Product Analyst",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/mohak-j-49a3b166/"
+          }
+        ],
+        "instructors": [
+          {
+            "name": "Sahil Agarwal",
+            "designation": "Lead Business Analyst",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/sahil-agarwal-46956813b/"
+          },
+          {
+            "name": "Sumit Shukla",
+            "designation": "Ex-Data Analyst, Hopscotch",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/ssumitshukla/"
+          },
+          {
+            "name": "Rishav Kumar",
+            "designation": "Principal - Analytics",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/rishavkumar1/"
+          },
+          {
+            "name": "Akash Garg",
+            "designation": "Senior Analytics Manager",
+            "company": "Flipkart",
+            "profile_url": "https://www.linkedin.com/in/akash-garg-india/"
+          },
+          {
+            "name": "Saksham  Arora",
+            "designation": "Software Engineer 2 @ Intuit",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/sakshamarora9575/"
+          },
+          {
+            "name": "Shashank Mittal",
+            "designation": "Senior Manager - Zomato",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/shashankmittal1991/"
+          },
+          {
+            "name": "Navdeep Singh",
+            "designation": "Senior Software Engineer",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/navdeep-singh-494498152/"
+          }
+        ]
+      },
+      "metadata": {
+        "scraped_at": "2026-02-19T21:08:47.416008",
+        "source_url": "https://nextleap.app/course/data-analyst-course"
+      }
+    },
+    {
+      "course": {
+        "title": "Product Manager Fellowship",
+        "url": "https://nextleap.app/course/product-management-course",
+        "duration_weeks": 16,
+        "fellowship_months": 4,
+        "live_class_hours": 100,
+        "placement_support_years": 1,
+        "certification_awarded": "Yes"
+      },
+      "cohort": {
+        "id": 47,
+        "start_date": "2026-03-07",
+        "status": "OPEN"
+      },
+      "pricing": {
+        "amount": 36999,
+        "currency": "INR",
+        "display": "INR 36,999"
+      },
+      "faculty": {
+        "mentors": [
+          {
+            "name": "Akash Agrawal",
+            "designation": "Senior Product Manager",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/akash-agrawal94/"
+          },
+          {
+            "name": "Ankita Pathak",
+            "designation": "Product Manager @ Flipkart",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/ankita-pathak-2b476619a/"
+          },
+          {
+            "name": "Devansh Jain",
+            "designation": "Product Manager",
+            "company": "Top Tech Company",
+            "profile_url": "https://in.linkedin.com/in/devansh-jain-336332126"
+          },
+          {
+            "name": "Nikita Agrawal",
+            "designation": "Building ZenfitX",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/nikita-agrawal-90803110b/"
+          },
+          {
+            "name": "Parth Dixit",
+            "designation": "Product Manager @ Tata 1mg",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/-parthdixit/"
+          },
+          {
+            "name": "Anuj Saxena",
+            "designation": "Associate Director",
+            "company": "Top Tech Company",
+            "profile_url": "https://in.linkedin.com/in/anuj-saxena-521954a2"
+          },
+          {
+            "name": "Samarth Chauhan",
+            "designation": "Building Khel Dekho",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/samarth79/"
+          },
+          {
+            "name": "Chinmay Agrawal",
+            "designation": "Product Manager, Airbase",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/chinmayagrawal/"
+          },
+          {
+            "name": "Amey Muley",
+            "designation": "Product @ Target",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/amey-muley-04472187/"
+          },
+          {
+            "name": "Bhawana Soni",
+            "designation": "Product Manager @ Bhanzu",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/bhawana-soni-a2839066/"
+          },
+          {
+            "name": "Shankar Anand",
+            "designation": "Group PM @ Zepto",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/shankar-anand/"
+          },
+          {
+            "name": "Karan Arora",
+            "designation": "Senior Product Manager @ Flipkart",
+            "company": "Top Tech Company",
+            "profile_url": "https://in.linkedin.com/in/karaniitr"
+          },
+          {
+            "name": "Surabhi Mor",
+            "designation": "Senior Product Manager @ Revel",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/surbhi-mor"
+          },
+          {
+            "name": "Vivek Agrawal",
+            "designation": "Principal Product Manager @Cimpress",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/vivekagrawal1/"
+          },
+          {
+            "name": "Anubhav Agrawal",
+            "designation": "Lead Product Manager @ Khatabook",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/anubhav-agrawal/"
+          },
+          {
+            "name": "Arjun Varanasi",
+            "designation": "Senior Product Manager @ Flipkart",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/arjun-varanasi/"
+          },
+          {
+            "name": "Siddhant Bhardwaj",
+            "designation": "Product Manager",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/siddhant-bhardwaj/"
+          },
+          {
+            "name": "Viren Baid",
+            "designation": "Co-Founder and Head",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/virenbaid/"
+          },
+          {
+            "name": "Kashif  Malik",
+            "designation": "Product @ PhonePe",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/kashifmalik32/"
+          },
+          {
+            "name": "Himanshu Agarwal",
+            "designation": "Product Lead @Acko",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/himanshuagarwal831/"
+          },
+          {
+            "name": "Ankita  Jain",
+            "designation": "Experienced Product Manager | Driving Innovation & Customer-Centric Solutions",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/ankitajain1995/"
+          },
+          {
+            "name": "Aditya  Upadhyay",
+            "designation": "Product @ CoinSwitch",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/aditya-upadhyay-09b31a12a/"
+          },
+          {
+            "name": "Kamal  Dhull",
+            "designation": "Product Manager @ PhonePe",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/kaydee24/"
+          }
+        ],
+        "instructors": [
+          {
+            "name": "Arindam Mukherjee",
+            "designation": "Co-founder Previously @ Flipkart, TripAdvisor",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/arindammukho/"
+          },
+          {
+            "name": "Prashanth Bhaskar",
+            "designation": "Product Manager @ UBER",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/prashanthbhaskar/"
+          },
+          {
+            "name": "Kartik  Singh",
+            "designation": "Product Designer II @Microsoft",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/kartiksinghdesign/"
+          },
+          {
+            "name": "Ishaan Sanji",
+            "designation": "Sr. Product Manager @Google",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/ishaan-sanji/"
+          },
+          {
+            "name": "Eshan Tiwari",
+            "designation": "Sr. Staff Data Scientist/TLM Previously @ Facebook",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/eshan-tiwari-a03b8724/"
+          },
+          {
+            "name": "Venkatesh  Gupta",
+            "designation": "Senior Product Manager @ ServiceNow",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/vg50"
+          },
+          {
+            "name": "Shailesh  Sharma",
+            "designation": "Senior Product Manager | IIM Bangalore | IIT Kanpur",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/shailesh-sharma/"
+          },
+          {
+            "name": "Saksham  Arora",
+            "designation": "Software Engineer 2 @ Intuit",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/sakshamarora9575/"
+          },
+          {
+            "name": "Shrenik Surana",
+            "designation": "Principal Product Manager",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/shreniksurana/"
+          }
+        ]
+      },
+      "metadata": {
+        "scraped_at": "2026-02-19T21:09:16.601890",
+        "source_url": "https://nextleap.app/course/product-management-course"
+      }
+    },
+    {
+      "course": {
+        "title": "UI/UX Designer Fellowship",
+        "url": "https://nextleap.app/course/ui-ux-design-course",
+        "duration_weeks": 8,
+        "fellowship_months": 4,
+        "live_class_hours": 100,
+        "placement_support_years": 1,
+        "certification_awarded": "Yes"
+      },
+      "cohort": {
+        "id": 26,
+        "start_date": "2026-03-07",
+        "status": "OPEN"
+      },
+      "pricing": {
+        "amount": 36999,
+        "currency": "INR",
+        "display": "INR 36,999"
+      },
+      "faculty": {
+        "mentors": [
+          {
+            "name": "Shahee Nannore  Hiran",
+            "designation": "Product Design Manager @Flipkart",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/shahee-nannore-hiran/"
+          },
+          {
+            "name": "Marmik  Patel",
+            "designation": "UX Designer @ Airbnb",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/marmikjpatel/"
+          },
+          {
+            "name": "Shamayita  Debnath",
+            "designation": "Ex - Senior UX Designer @ Target",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/shamayita-debnath/"
+          },
+          {
+            "name": "Aditi  Gore",
+            "designation": "Design",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/aditi-gore-11186b24/"
+          },
+          {
+            "name": "Arpita Dhir",
+            "designation": "Product Design Lead",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/arpita-dhir/"
+          },
+          {
+            "name": "Siddharth  Jain",
+            "designation": "Lead Product Designer @Kuku FM",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/sidddjain/"
+          },
+          {
+            "name": "Pranav Gupta",
+            "designation": "Head",
+            "company": "Design",
+            "profile_url": "https://www.linkedin.com/in/uxdesigner1/"
+          }
+        ],
+        "instructors": [
+          {
+            "name": "Karthi Subbaraman",
+            "designation": "Senior Director Previously @ Microsoft",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/skarthi/"
+          },
+          {
+            "name": "Kartik  Singh",
+            "designation": "Product Designer II @Microsoft",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/kartiksinghdesign/"
+          },
+          {
+            "name": "Arindam Mukherjee",
+            "designation": "Co-founder Previously @ Flipkart, TripAdvisor",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/arindammukho/"
+          },
+          {
+            "name": "Ranganath Krishnamani",
+            "designation": "Founder / Creative Director Previously @ Redbus, Adobe",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/ranganath-krishnamani-740b3732/"
+          },
+          {
+            "name": "Neel Raj",
+            "designation": "Head",
+            "company": "Top Tech Company",
+            "profile_url": "https://in.linkedin.com/in/neelraj"
+          },
+          {
+            "name": "Sharang Sharma",
+            "designation": "Principal Consultant @Agentic Path",
+            "company": "Top Tech Company",
+            "profile_url": "https://www.linkedin.com/in/sharangsharmadesign/"
+          }
+        ]
+      },
+      "metadata": {
+        "scraped_at": "2026-02-19T21:09:47.071685",
+        "source_url": "https://nextleap.app/course/ui-ux-design-course"
+      }
+    }
+  ]
+}
