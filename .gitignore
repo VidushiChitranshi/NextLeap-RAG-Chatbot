@@ -11,10 +11,9 @@ venv/
 ENV/
 
 # Databases
-data/chroma_db/
-data/chroma_db_v1/
-!data/chroma_db_v2/
 *.sqlite3
+!data/chroma_db_v2/
+!data/chroma_db_v2/*.sqlite3
 
 # Debug/Temporary files
 rendered_page.html
